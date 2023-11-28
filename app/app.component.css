@@ -1,0 +1,53 @@
+.BtnContinue{
+    height: 112px;
+    width: 100%;
+
+    background-color: var(--cor-azul);
+
+    border-radius: 20px;
+    border: none;
+}
+.BlueBackground{
+    height: 60vh;
+    width: 1200px;
+    border-bottom-right-radius: 500px;
+    border-bottom-left-radius: 500px;
+
+    z-index: 1;
+    position: relative;
+
+    background-color: var(--cor-azul);
+}
+.imagem{
+    position: absolute;
+    width: 1062.33px;
+    height: 1200px;
+
+    margin-left: 25px;
+    margin-top: 140px;
+}
+.CirculoImg{
+    background-color: rgba(0, 0, 0, 0.1);
+
+    width: 650px;
+    height: 100px;
+    border-radius: 500%;
+
+    margin-top: 1170px;
+    margin-left: 325px;
+}
+.Container{
+    margin: 25px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    display: flex;
+    gap: 90px;
+    flex-direction: column;
+}
+.ContainerGeral{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

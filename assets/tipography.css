@@ -1,0 +1,43 @@
+.title {
+    font-family: var(--font-poppins);
+    font-size: 64px;
+    font-weight: 700;
+    font-style: normal;
+
+    color: var(--cor-ligth);
+
+    text-align: center;
+}
+
+.title_black {
+    font-family: var(--font-poppins);
+    font-size: 64px;
+    font-weight: 700;
+    font-style: normal;
+
+    color: var(--cor-dark);
+
+    text-align: center;
+}
+
+.text {
+    font-family: var(--font-poppins);
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+
+    color: var(--cor-dark);
+
+    text-align: center;
+}
+
+.text_bt {
+    font-family: var(--font-poppins);
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+
+    color: var(--cor-ligth);
+
+    text-align: center;
+}
