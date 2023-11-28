@@ -8,7 +8,7 @@
 
     background-color: var(--cor-azul);
 
-    border-radius: 20px;
+    border-radius: 16px;
     border: none;
 }
 
@@ -38,9 +38,9 @@
 .Container{
     margin: 25px;
     position: absolute;
-    bottom: 16px;
-    right: 16px;
-    left: 16px;
+    bottom: 8px;
+    right: 8px;
+    left: 8px;
     display: flex;
     gap: 80px;
     flex-direction: column;
