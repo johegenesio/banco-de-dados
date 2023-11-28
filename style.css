@@ -3,7 +3,7 @@
 @import url('tipography.css');
 
 .BtnContinue{
-    height: 112px;
+    height: 96px;
     width: 100%;
 
     background-color: var(--cor-azul);
@@ -24,18 +24,16 @@
     background-color: var(--cor-azul);
 }
 .imagem{
-    width: 822px;
-    height: 944px;
-}
-.CirculoImg{
-    background-color: rgba(0, 0, 0, 0.1);
-
     width: 650px;
-    height: 100px;
-    border-radius: 500%;
+    height: auto;
 
-    margin-top: 1170px;
-    margin-left: 325px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    margin-top: 120px;
 }
 .Container{
     margin: 25px;
@@ -44,7 +42,7 @@
     right: 16px;
     left: 16px;
     display: flex;
-    gap: 90px;
+    gap: 80px;
     flex-direction: column;
 }
 .ContainerGeral{
