@@ -3,7 +3,7 @@
 @import url('tipography.css');
 
 .BtnContinue{
-    height: 96px;
+    height: 104px;
     width: 100%;
 
     background-color: var(--cor-azul);
@@ -24,7 +24,7 @@
     background-color: var(--cor-azul);
 }
 .imagem{
-    width: 650px;
+    width: 720px;
     height: auto;
 
     position: absolute;
