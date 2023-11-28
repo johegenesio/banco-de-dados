@@ -13,7 +13,7 @@
 }
 
 .BlueBackground{
-    height: 900px;
+    height: 55vh;
     width: 100vw;
     border-bottom-right-radius: 500px;
     border-bottom-left-radius: 500px;
@@ -33,7 +33,7 @@
 
     transform: translate(-50%, -50%);
 
-    margin-top: 10vh;
+    margin-top: 124px;
 }
 .Container{
     position: absolute;
