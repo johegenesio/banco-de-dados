@@ -2,11 +2,6 @@
 @import url('variables.css');
 @import url('tipography.css');
 
-body {
-    height: 1920px;
-    width: 1200px;
-}
-
 .BtnContinue{
     height: 112px;
     width: 100%;
