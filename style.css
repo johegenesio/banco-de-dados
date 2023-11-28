@@ -24,11 +24,8 @@
     background-color: var(--cor-azul);
 }
 .imagem{
-    width: 1062.33px;
-    height: 1200px;
-
-    margin-left: 25px;
-    margin-top: 140px;
+    width: 822px;
+    height: 944px;
 }
 .CirculoImg{
     background-color: rgba(0, 0, 0, 0.1);
