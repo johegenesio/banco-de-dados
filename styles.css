@@ -1,9 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-@import "assets/reset.css";
-@import "assets/variables.css";
-@import "assets/tipography.css";
-
-body{
-    height: 1920px;
-    width: 1200px;
-}
