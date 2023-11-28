@@ -8,7 +8,7 @@
 
     background-color: var(--cor-azul);
 
-    border-radius: 16px;
+    border-radius: 32px;
     border: none;
 }
 
@@ -36,11 +36,10 @@
     margin-top: 10vh;
 }
 .Container{
-    margin: 25px;
     position: absolute;
-    bottom: 8px;
-    right: 8px;
-    left: 8px;
+    bottom: 24px;
+    right: 24px;
+    left: 24px;
     display: flex;
     gap: 80px;
     flex-direction: column;
