@@ -31,6 +31,10 @@ main {
     flex-direction: row;
     gap: 120px;  
     padding-top: 160px;
+
+    width: 80vw;
+    height: 80vh;
+    overflow-x: scroll;
 }
 
 main .col {
