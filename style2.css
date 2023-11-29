@@ -48,7 +48,7 @@ h1 {
 main {
     display: flex;
     flex-direction: row;
-    gap: 88px;
+    gap: 102px;
 
     width: 80vw;
     height: auto;
@@ -56,7 +56,7 @@ main {
 
     margin: 32px auto;
 
-    padding: 32px;
+    padding: 52px;
 }
 
 main .col {
@@ -71,9 +71,7 @@ main .col button {
 
     border-radius: 32px;
     background: var(--cor-light);
-    box-shadow:  18px 18px 30px #bebebe,
-             -20px -20px 40px #ffffff;
-    border: none;
+    border: 2px solid var(--cor-azul);
 
     width: 300px;
     height: 200px;
