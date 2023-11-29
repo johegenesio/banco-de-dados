@@ -48,7 +48,7 @@ h1 {
 main {
     display: flex;
     flex-direction: row;
-    gap: 102px;
+    gap: 56px;
 
     width: 80vw;
     height: auto;
@@ -72,6 +72,7 @@ main .col button {
     border-radius: 32px;
     background: var(--cor-light);
     border: 2px solid var(--cor-azul);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
     width: 300px;
     height: 200px;
