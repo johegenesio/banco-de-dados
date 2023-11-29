@@ -60,14 +60,14 @@ main {
 
     margin: 32px auto;
 
-    padding: 46px;
+    padding: 42px;
 }
 
 main .col {
     display: flex;
     flex-direction: column;
 
-    gap: 88px;
+    gap: 72px;
 }
 
 main .col button {
@@ -76,7 +76,7 @@ main .col button {
     border-radius: 32px;
     background: var(--cor-light);
     border: 2px solid var(--cor-azul);
-    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
 
     width: 300px;
     height: 200px;
