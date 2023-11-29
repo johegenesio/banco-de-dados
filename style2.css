@@ -1,3 +1,7 @@
+@import url('reset.css');
+@import url('variables.css');
+@import url('tipography.css');
+
 .selectCourse {
     position: absolute;
     top: 100px;
@@ -36,7 +40,7 @@ main .col {
     gap: 88px;
 }
 
-main .col a {
+main .col button {
     width: 467px;
     height: 280px;
 
