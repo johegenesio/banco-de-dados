@@ -36,7 +36,7 @@ main .col {
     gap: 88px;
 }
 
-main .col button {
+main .col a {
     width: 467px;
     height: 280px;
 
