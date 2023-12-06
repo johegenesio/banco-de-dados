@@ -1,56 +1,49 @@
-@import url('reset.css');
-@import url('variables.css');
-@import url('tipography.css');
-
-.BtnContinue{
-    height: 104px;
-    width: 100%;
-
-    background-color: var(--cor-azul);
-
-    border-radius: 32px;
-    border: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+body{
+    padding: 16px;
 }
+    
 
-.BlueBackground{
-    height: 55vh;
+nav{
     width: 100vw;
-    border-bottom-right-radius: 500px;
-    border-bottom-left-radius: 500px;
+    height: 5vh;
 
-    z-index: 1;
-    position: relative;
-
-    background-color: var(--cor-azul);
-}
-.imagem{
-    width: 760px;
-    height: auto;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    margin-top: 124px;
-}
-.Container{
-    position: absolute;
-    bottom: 24px;
-    right: 24px;
-    left: 24px;
     display: flex;
-    gap: 88px;
-    flex-direction: column;
-}
-.ContainerGeral{
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    
+}
+
+#Data{
+    width: 20vw;
+}
+
+
+
+.BoxGroup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    height: 30vh;
+}
+
+.Box{
+    width: 20vw;
+    height: 20vh;
+    background-color: aqua;
+}
+
+.Graphic{
+    width: 60vw;
+    height: 60vh;
+    z-index: 1;
+
+}
+
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

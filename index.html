@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+
 </head>
 <body>
-    <div class="ContainerGeral">
-        <div class="BlueBackground">
-          <img class="imagem" src="Group 1.png" alt="icone">
-          <div class="CirculoImg"></div>
+    
+    <nav>
+        <p>Relatório</p>
+        <div>
+            <input type="date" name="" id="Data">
+            <input type="time" name="" id="Tempo">
+            <input type="submit" value="Pesquisar" id="Search">
         </div>
-        <div class="Container">
-          <p class="title_black justificar">Bem Vindo(a)!</p>
-          <a href="index2.html" class="BtnContinue text_bt">Continue</a>
-        </div>
-      </div>
+        <div></div>
+    </nav>
+    <main>
+        <section class="BoxGroup">
+            <div class="Box">qtd de aluno</div>
+            <div class="Box">qtd de professores</div>
+            <div class="Box">qtd de funcionários</div>
+            <div class="Box">qtd de visitantes</div>
+        </section>
+        <section class="Container">
+            <div class="Graphic">
+                <canvas class="GH" id="myChart"></canvas>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
