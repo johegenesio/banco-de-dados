@@ -3,12 +3,13 @@ const ctx = document.getElementById('myChart');
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: ['DS', 'Mecânico de usinagem', 'Soldagem', 'Elétrica', 'Assistente de ADM', 'Administração', 'Metalurgia', 'Mecânica', 'Outros'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
+        label: 'Alunos',
+        data: [12, 19, 3, 5, 2, 3, 10, 5, 5],
+        backgroundColor: '#0094FF'
+      }
+    ]
     },
     options: {
       scales: {

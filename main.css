@@ -1,2 +1,4 @@
 @import "./reset.css";
 @import "style.css";
+@import url('variables.css');
+@import url('typography.css');

@@ -1,49 +1,70 @@
-body{
-    padding: 16px;
+main{
+    padding: 0 2vw;
 }
-    
 
 nav{
-    width: 100vw;
-    height: 5vh;
+    height: 8vh;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
+    padding: 8px 2vw;
+    border-bottom: 2px solid var(--cor-dark);
 }
-
-#Data{
-    width: 20vw;
-}
-
-
 
 .BoxGroup{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    width: 100vw;
-    height: 30vh;
+    margin-top: 48px;
 }
 
 .Box{
-    width: 20vw;
-    height: 20vh;
-    background-color: aqua;
-}
-
-.Graphic{
-    width: 60vw;
-    height: 60vh;
-    z-index: 1;
-
-}
-
-.Container{
+    width: 16vw;
+    height: 16vh;
+    background-color: var(--cor-dark);
+    color: var(--cor-light);
+    border-radius: 8px;
+    padding: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 24px;
+    flex-direction: column;
+    text-align: center;
+}
 
+.BoxTotal {
+    background-color: var(--cor-azul);
+}
+
+.Graphic{
+    width: 100%;
+    margin: 40px 0;
+}
+
+.inputs {
+    display: flex;
+    gap: 16px;
+}
+
+#Search {
+    font-size: 16px;
+    font-family: var(--font-poppins);
+    background-color: var(--cor-azul);
+    border-color: var(--cor-azul);
+    color: var(--cor-light);
+    padding: 8px 32px;
+    cursor: pointer;
+}
+
+#Date, #Time {
+    font-family: var(--font-poppins);
+    padding: 6px 12px;
+}
+
+input, select {
+    border: 2px solid var(--cor-dark);
+    border-radius: 8px;
 }
