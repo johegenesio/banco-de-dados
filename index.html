@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="./js/dados.js  " defer></script>
+
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <nav>
         <h1 class="title-nav">Relatório</h1>
         <div class="inputs">
-            <input type="date" name="" id="Date">
+            <select name="Usuário" id="User">
+                <option value="">Usuário</option>
+                <option value="">Professor</option>
+                <option value="">Aluno</option>
+                <option value="">Funcionário</option>
+                <option value="">Visitante</option>
+            </select>
+            <input type="date" name="DataBox" id="dataInput" required>
             <select name="" id="Time">
                 <option value="">Tudo</option>
                 <option value="">Manhã</option>
                 <option value="">Tarde</option>
                 <option value="">Noite</option>
             </select>
-            <input type="submit" value="Pesquisar" id="Search">
+            <input type="submit" value="Pesquisar" id="Search" onclick="consultarAPI()">
         </div>
     </nav>
     <main>
