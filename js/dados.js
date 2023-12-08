@@ -1,4 +1,5 @@
 let retorno = []
+
     function consultarAPI() {
         // Obter o valor do input date
         var dataInput = document.getElementById("dataInput").value;
@@ -13,16 +14,30 @@ let retorno = []
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
-                    retorno = data
-                    return retorno
+                    
+                    data.forEach(function(objeto) {
+                        // Obtém as chaves do objeto (supondo que haja pelo menos um objeto)
+                        var primeiraChave = Object.keys(objeto)[0];
+                      
+                        // Acessa as propriedades usando a primeira chave
+                        var dia = objeto[primeiraChave].dia;
+                        var hora = objeto[primeiraChave].hora;
+                        var mes = objeto[primeiraChave].mes;
+                        var usuario = objeto[primeiraChave].usuario;
+                      
+                        console.log("Dia:", dia);
+                        console.log("Hora:", hora);
+                        console.log("Mês:", mes);
+                        console.log("Usuário:", usuario);
+                      });
+            
+                      
                 })
                 .catch(error => {
                     console.error("Erro na requisição:", error);
                 });
                 console.log(retorno)
         }
-
-
 
         const ctx = document.getElementById('myChart');
 
@@ -46,3 +61,5 @@ let retorno = []
           }
         });
       
+
+       
