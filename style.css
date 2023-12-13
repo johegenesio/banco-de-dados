@@ -11,6 +11,8 @@ nav{
 
     padding: 8px 2vw;
     border-bottom: 2px solid var(--cor-dark);
+
+    flex-flow: row wrap;
 }
 
 .BoxGroup{
@@ -18,11 +20,13 @@ nav{
     justify-content: space-between;
     align-items: center;
     margin-top: 48px;
+    flex-flow: row wrap;
+    gap: 8px;
 }
 
 .Box{
     width: 16vw;
-    height: 16vh;
+    height: 120px;
     background-color: var(--cor-dark);
     color: var(--cor-light);
     border-radius: 8px;
@@ -30,9 +34,11 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
     flex-direction: column;
     text-align: center;
+    flex-grow: 1;
+    min-width: 200px;
+    gap: 16px;
 }
 
 .BoxTotal {
@@ -49,16 +55,6 @@ nav{
     gap: 16px;
 }
 
-#Search {
-    font-size: 16px;
-    font-family: var(--font-poppins);
-    background-color: var(--cor-azul);
-    border-color: var(--cor-azul);
-    color: var(--cor-light);
-    padding: 8px 32px;
-    cursor: pointer;
-}
-
 #Date, #Time {
     font-family: var(--font-poppins);
     padding: 6px 12px;
@@ -67,4 +63,25 @@ nav{
 input, select {
     border: 2px solid var(--cor-dark);
     border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        justify-content: center;
+        gap: 8px;
+        height: auto;
+        padding: 16px;
+    }
+    .BoxGroup{
+        margin-top: 8px;
+    }
+    .Container {
+        overflow-x: scroll;
+        height: auto;
+    }
+    .Graphic{
+        width: 1000px;
+        height: 500px;
+        margin: 40px 0;
+    }
 }
