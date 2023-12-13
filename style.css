@@ -53,11 +53,13 @@ nav{
 .inputs {
     display: flex;
     gap: 16px;
+    flex-flow: row wrap;
 }
 
-#Date, #Time {
+#Date, #Time, #Users {
     font-family: var(--font-poppins);
     padding: 6px 12px;
+    flex-grow: 1;
 }
 
 input, select {
@@ -68,7 +70,7 @@ input, select {
 @media (max-width: 800px) {
     nav {
         justify-content: center;
-        gap: 8px;
+        gap: 16px;
         height: auto;
         padding: 16px;
     }
