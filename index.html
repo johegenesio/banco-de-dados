@@ -53,11 +53,27 @@
         </div>
     </div>
     <div class="result-container">
-        <div id="resultado" class="card-container"></div>
         <p id="noResultMessage" class="no-result-message">Nenhum registro encontrado.</p>
-        <p id="quantidadeRegistros" class="quantidade-registros"></p>
+            <p id="quantidadeRegistros" class="quantidade-registros"></p>
+        <div class="result-container">
+            <table id="tabela-resultados" class="card-container">
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Dia</th>
+                        <th>Horas</th>
+                        <th>Mês</th>
+                        <th>CPF</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado"></tbody>
+            </table>            
+            
+        </div>        
     </div>
-    <div id="resultado" class="card-container"></div>
+    <div id="resultado" class="card-container">
+
+    </div>
     <script src="script.js"></script>
 </body>
 

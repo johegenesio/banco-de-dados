@@ -25,28 +25,29 @@ function carregarUltimosRegistros() {
 }
 
 function exibirResultados(resultados) {
-    const resultadoDiv = document.getElementById('resultado');
+    const resultadoTabela = document.getElementById('resultado');
     const noResultMessage = document.getElementById('noResultMessage');
     const quantidadeRegistros = document.getElementById('quantidadeRegistros');
 
-    resultadoDiv.innerHTML = '';
+    // Limpar a tabela de resultados antes de adicionar novos resultados
+    resultadoTabela.innerHTML = '';
 
     if (resultados.length > 0) {
-        const lista = document.createElement('ul');
         resultados.forEach(item => {
-            const listItem = document.createElement('li');
-            listItem.textContent = `Curso: ${item.curso}, Dia: ${item.dia}, Hora: ${item.hora}, Mês: ${item.mes}, Usuário: ${item.usuario}`;
-            lista.appendChild(listItem);
+            const linha = document.createElement('tr');
+            linha.innerHTML = `<td class="curso">${item.curso}</td><td class="dia">${item.dia}</td><td class="hora">${item.hora}</td><td class="mes">${item.mes}</td><td class="cpf">${item.usuario}</td>`;
+            resultadoTabela.appendChild(linha);
         });
-        resultadoDiv.appendChild(lista);
+
         noResultMessage.style.display = 'none';
     } else {
         noResultMessage.style.display = 'block';
     }
-
     // Exibir a quantidade de registros encontrados
     quantidadeRegistros.textContent = `Registros encontrados: ${resultados.length}`;
 }
+
+
 
 function pesquisarPorCampo(campo, valor) {
     const apiUrl = 'https://biblioteca-senai-5b3e9-default-rtdb.firebaseio.com/.json';
