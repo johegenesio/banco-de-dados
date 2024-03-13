@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="main.css">
+    <title>Consulta de Dados</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <nav>
-        <h1 class="title-nav">Relatório</h1>
-        <div class="inputs">
-            <input type="date" name="" id="Date">
-            <select name="" id="Time">
-                <option value="">Tudo</option>
-                <option value="">Manhã</option>
-                <option value="">Tarde</option>
-                <option value="">Noite</option>
-            </select>
-            <input type="submit" value="Pesquisar" id="Search">
+    <div class="search-container">
+        <div class="column-container">
+            <h1>Consulta da biblioteca</h1>
+            <div class="div-gap">
+                <div class="row-container">
+                    <div class="input-container input-curso">
+                        <label for="cursoInput">Pesquisar por Curso:</label>
+                        <input type="text" id="cursoInput" class="input-field" placeholder="Digite o nome do curso">
+                        <button onclick="pesquisarPorCampo('curso', cursoInput.value)" class="search-button">Pesquisar
+                            Curso</button>
+                    </div>
+                    <div class="input-container input-cpf">
+                        <label for="usuarioInput">Pesquisar por CPF:</label>
+                        <input type="text" id="usuarioInput" class="input-field" placeholder="Digite o número do CPF">
+                        <button onclick="pesquisarPorCampo('usuario', usuarioInput.value)" class="search-button">Pesquisar
+                            CPF</button>
+                    </div>
+                </div>
+                <div class="input-container input-dia">
+                    <label for="diaInput">Pesquisar por Dia:</label>
+                    <input type="number" id="diaInput" class="input-field" placeholder="Digite o dia" max="31">
+                    <button onclick="pesquisarPorCampo('dia', diaInput.value)" class="search-button">Pesquisar Dia</button>
+                </div>
+            </div>
         </div>
-    </nav>
-    <main>
-        <section class="BoxGroup text">
-            <div class="Box">
-                <h2>Quantidade de aluno</h2>
-                <p class="title">124</p>
+        <div class="input-container">
+            <div>
+                <label for="diaHoraInicioInput">Pesquisar por Dia e Intervalo de Horas (início):</label>
+                <input type="number" id="diaHoraInicioInput" class="input-field" placeholder="Digite o dia"
+                max="31">
+                <input type="number" id="horaInicioInput" class="input-field" placeholder="Digite a hora de início" max="24">
             </div>
-            <div class="Box">
-                <h2>Quantidade de professores</h2>
-                <p class="title">124</p>
+            <div>
+                <label for="diaHoraFimInput">Pesquisar por Dia e Intervalo de Horas (fim):</label>
+                <input type="number" id="diaHoraFimInput" class="input-field" placeholder="Digite o dia"
+                max="31">
+                <input type="number" id="horaFimInput" class="input-field" placeholder="Digite a hora de fim" max="24">
             </div>
-            <div class="Box">
-                <h2>Quantidade de funcionários</h2>
-                <p class="title">124</p>
-            </div>
-            <div class="Box">
-                <h2>Quantidade de visitantes</h2>
-                <p class="title">124</p>
-            </div>
-            <div class="Box BoxTotal">
-                <h2>Quantidade total</h2>
-                <p class="title">496</p>
-            </div>
-        </section>
-        <section class="Container">
-            <div class="Graphic">
-                <canvas class="GH" id="myChart"></canvas>
-            </div>
-        </section>
-    </main>
+            <button
+                onclick="pesquisarPorIntervaloDeHorasEDia(diaHoraInicioInput.value, horaInicioInput.value, diaHoraFimInput.value, horaFimInput.value)"
+                class="search-button">Pesquisar Intervalo de Horas e Dia</button>
+        </div>
+    </div>
+    <div class="result-container">
+        <div id="resultado" class="card-container"></div>
+        <p id="noResultMessage" class="no-result-message">Nenhum registro encontrado.</p>
+        <p id="quantidadeRegistros" class="quantidade-registros"></p>
+    </div>
+    <div id="resultado" class="card-container"></div>
+    <script src="script.js"></script>
 </body>
+
 </html>

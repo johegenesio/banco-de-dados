@@ -1,70 +1,97 @@
-main{
-    padding: 0 2vw;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
-    height: 8vh;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 8px 2vw;
-    border-bottom: 2px solid var(--cor-dark);
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-.BoxGroup{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 48px;
+.container {
+    max-width: 800px;
+    margin: 56px auto;
+    padding: 24px;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
-.Box{
-    width: 16vw;
-    height: 16vh;
-    background-color: var(--cor-dark);
-    color: var(--cor-light);
-    border-radius: 8px;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    flex-direction: column;
+h1 {
     text-align: center;
+    color: #333;
 }
 
-.BoxTotal {
-    background-color: var(--cor-azul);
-}
-
-.Graphic{
-    width: 100%;
-    margin: 40px 0;
-}
-
-.inputs {
+.search-container {
     display: flex;
-    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 8px;
+
+    background-color: #ddd;
+
+    padding: 16px;
 }
 
-#Search {
-    font-size: 16px;
-    font-family: var(--font-poppins);
-    background-color: var(--cor-azul);
-    border-color: var(--cor-azul);
-    color: var(--cor-light);
-    padding: 8px 32px;
-    cursor: pointer;
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
-#Date, #Time {
-    font-family: var(--font-poppins);
-    padding: 6px 12px;
+.row-container {
+    display: flex;
+    gap: 8px;
 }
 
-input, select {
-    border: 2px solid var(--cor-dark);
+.div-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-dia {
+    width: 100%;
+}
+
+.input-field {
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
     border-radius: 8px;
+    width: 100%;
+        
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-button {
+    background-color: #4e88cf;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#resultado {
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.quantidade-registros {
+    text-align: center;
+    color: #888;
+    margin-top: 24px;
 }
