@@ -17,39 +17,42 @@
                     <div class="input-container input-curso">
                         <label for="cursoInput">Pesquisar por Curso:</label>
                         <input type="text" id="cursoInput" class="input-field" placeholder="Digite o nome do curso">
-                        <button onclick="pesquisarPorCampo('curso', cursoInput.value)" class="search-button">Pesquisar
+                        <button onclick="pesquisarPorCampo('curso', cursoInput.value)" class="search-button fill">Pesquisar
                             Curso</button>
                     </div>
                     <div class="input-container input-cpf">
                         <label for="usuarioInput">Pesquisar por CPF:</label>
                         <input type="text" id="usuarioInput" class="input-field" placeholder="Digite o número do CPF">
-                        <button onclick="pesquisarPorCampo('usuario', usuarioInput.value)" class="search-button">Pesquisar
+                        <button onclick="pesquisarPorCampo('usuario', usuarioInput.value)" class="search-button fill">Pesquisar
                             CPF</button>
                     </div>
                 </div>
-                <div class="input-container input-dia">
-                    <label for="diaInput">Pesquisar por Dia:</label>
-                    <input type="number" id="diaInput" class="input-field" placeholder="Digite o dia" max="31">
-                    <button onclick="pesquisarPorCampo('dia', diaInput.value)" class="search-button">Pesquisar Dia</button>
+                <div class="row-container">
+                    <div class="input-container input-dia">
+                        <label for="diaInput">Pesquisar por Dia:</label>
+                        <input type="number" id="diaInput" class="input-field" placeholder="Digite o dia" max="31">
+                        <button onclick="pesquisarPorCampo('dia', diaInput.value)" class="search-button fill">Pesquisar Dia</button>
+                    </div>
+
+                    <div class="input-container input-mes">
+                        <label for="mesInput">Pesquisar por Mês:</label>
+                        <input type="number" id="mesInput" class="input-field" placeholder="Digite o mês" max="12">
+                        <button onclick="pesquisarPorCampo('mes', mesInput.value)" class="search-button fill">Pesquisar Mês</button>
+                    </div>
+    
                 </div>
+
+                <div class="input-container input-mes">
+                    <label for="cursoMesInput">Pesquisar por Curso e Mês: </label>
+                    <div class="row-container">
+                        <input type="text" id="cursoMesInput" class="input-field" placeholder="Digite o curso">
+                        <input type="number" id="mesMesInput" class="input-field" placeholder="Digite o mês" max="12">
+                    </div>
+                    <button onclick="pesquisarPorCursoEMesSeparadamente()" class="search-button fill">Pesquisar</button>
+
+                </div>
+                
             </div>
-        </div>
-        <div class="input-container">
-            <div>
-                <label for="diaHoraInicioInput">Pesquisar por Dia e Intervalo de Horas (início):</label>
-                <input type="number" id="diaHoraInicioInput" class="input-field" placeholder="Digite o dia"
-                max="31">
-                <input type="number" id="horaInicioInput" class="input-field" placeholder="Digite a hora de início" max="24">
-            </div>
-            <div>
-                <label for="diaHoraFimInput">Pesquisar por Dia e Intervalo de Horas (fim):</label>
-                <input type="number" id="diaHoraFimInput" class="input-field" placeholder="Digite o dia"
-                max="31">
-                <input type="number" id="horaFimInput" class="input-field" placeholder="Digite a hora de fim" max="24">
-            </div>
-            <button
-                onclick="pesquisarPorIntervaloDeHorasEDia(diaHoraInicioInput.value, horaInicioInput.value, diaHoraFimInput.value, horaFimInput.value)"
-                class="search-button">Pesquisar Intervalo de Horas e Dia</button>
         </div>
     </div>
     <div class="result-container">

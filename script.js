@@ -84,6 +84,7 @@ function pesquisarPorCampo(campo, valor) {
         limparCampos();
 }
 
+
 function pesquisarPorIntervaloDeHorasEDia(diaInicio, horaInicio, diaFim, horaFim) {
     const apiUrl = 'https://biblioteca-senai-5b3e9-default-rtdb.firebaseio.com/.json';
 
@@ -128,6 +129,54 @@ function limparCampos() {
     document.getElementById('horaFimInput').value = '';
     document.getElementById('diaHoraInicioInput').value = '';
     document.getElementById('diaHoraFimInput').value = '';
+    document.getElementById('mesInput').value = ''; 
 }
 
+
+
 document.addEventListener('DOMContentLoaded', carregarUltimosRegistros);
+
+
+
+
+
+
+function pesquisarPorCursoEMesSeparadamente() {
+    const curso = document.getElementById('cursoMesInput').value;
+    const mes = document.getElementById('mesMesInput').value;
+    pesquisarPorCursoEMes('curso', curso, 'mes', mes);
+}
+
+function pesquisarPorCursoEMes(cursoCampo, cursoValor, mesCampo, mesValor) {
+    const apiUrl = 'https://biblioteca-senai-5b3e9-default-rtdb.firebaseio.com/.json';
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log('Resposta da API:', data);
+
+            if (data !== null) {
+                const registros = Object.values(data)
+                    .filter(item => {
+                        const cursoString = (typeof item[cursoCampo] === 'string') ? item[cursoCampo] : item[cursoCampo].toString();
+                        const mesString = (typeof item[mesCampo] === 'string') ? item[mesCampo] : item[mesCampo].toString();
+
+                        return cursoString.toLowerCase().includes(cursoValor.toLowerCase()) &&
+                               mesString.toLowerCase().includes(mesValor.toLowerCase());
+                    });
+
+                if (registros.length > 0) {
+                    exibirResultados(registros);
+                } else {
+                    console.error(`Nenhum registro encontrado para ${cursoCampo} = ${cursoValor} e ${mesCampo} = ${mesValor}.`);
+                    exibirResultados([]);
+                }
+            } else {
+                console.error('Resposta da API é null. Não há dados disponíveis.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados:', error);
+        });
+        limparCampos();
+}
